@@ -14,7 +14,7 @@ const Login = () => {
   };
 
   return (
-    <Card className="shadow">
+    <Card className="shadow-css">
       <Row xs={1} md={2}>
         <Col>
           <Card.Body>
@@ -54,12 +54,12 @@ const Login = () => {
             </Form>
           </Card.Body>
         </Col>
-        <Col>
+        <Col className="border-start">
           <div className="p-3">
             <img
-              src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
-              alt="Imagen comida"
-              className="img-fluid object-fit-cover rounded shadow"
+              src="https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg"
+              alt="Imagen comida" loading="lazy"
+              className="img-fluid img-css"
             />
           </div>
         </Col>
