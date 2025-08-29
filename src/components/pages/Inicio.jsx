@@ -1,9 +1,14 @@
+import CarouselInicio from "./CarouselInicio";
+
 
 const Inicio = () => {
     return (
+        <>
+        <CarouselInicio />
         <div>
-            <h1>Pagina de inicio</h1>
+            <h1>Nuestros productos</h1>
         </div>
+        </>
     );
 };
 
