@@ -1,9 +1,14 @@
+import ItemProducto from "./productos/ItemProducto";
+
 
 const Administrador = () => {
     return (
-        <div>
-            <h1>Panel de Administrador</h1>
-        </div>
+        <section>
+            <h1>Productos disponibles</h1>
+            <div>
+            <ItemProducto />
+            </div>
+        </section>
     );
 };
 

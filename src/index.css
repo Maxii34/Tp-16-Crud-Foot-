@@ -32,19 +32,20 @@ main{
 /*Card detalles*/
 /*Imagen en la izquierda y detalles a la derecha*/
 .Card-producto {
-  width: 100%;         /* siempre ocupa el ancho de la columna */
-  max-width: 22rem;    /* pero nunca pasa de 288px */
+  width: 100%;         
+  max-width: 22rem;    
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   transition: 300ms;
-  margin: 0 auto;      /* centra la card cuando sea más chica que el col */
+  margin: 0 auto;      
+  background-color: #fffff;
 }
 
 .Card-producto:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease, border-radius 0.3s ease;
-  background-color: #fff;
+  background-color: #e7dfdf49;
 }
 
 .img-Detalle {
