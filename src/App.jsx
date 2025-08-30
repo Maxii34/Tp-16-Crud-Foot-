@@ -33,7 +33,8 @@ function App() {
               path="/admin/editar"
               element={<FormularioProductos></FormularioProductos>}
             />
-            <Route path="*" element={<Error404></Error404>} />
+            <Route path="*" element={<Error404></Error404>} 
+            />
           </Routes>
         </main>
         <Footer></Footer>
