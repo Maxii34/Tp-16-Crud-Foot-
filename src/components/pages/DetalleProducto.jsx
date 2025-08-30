@@ -7,14 +7,14 @@ const DetalleProducto = () => {
   return (
     <Card className="mb-3 DetalleCard">
       <Row className="g-0"> {/* g-0 quita el gap entre columnas */}
-        <Col md={4}>
+        <Col md={4} lg={12}>
           <Card.Img
             src="https://images.pexels.com/photos/28509915/pexels-photo-28509915.jpeg"
             alt="imagen"
             className="img-Detalle" /* para que ocupe toda la altura */
           />
         </Col>
-        <Col md={8}>
+        <Col md={8} lg={12}>
           <Card.Body>
             <Card.Title>Pizza margarita clasica</Card.Title>
             <Card.Text>
