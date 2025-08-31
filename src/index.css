@@ -71,3 +71,14 @@ main{
 .bord-top {
   border-top: 1px solid black ;
 }
+
+/*Imagen dentro de la tabla de productos disponibles*/
+.table-img {
+  width: 150px;
+  border: 2px solid #33303049;
+  object-fit: contain;
+  transition: transform 0.9s ease; 
+}
+.table-img:hover {
+  transform: scale(1.09);        /* 🔹 zoom suave al pasar el mouse */
+}
