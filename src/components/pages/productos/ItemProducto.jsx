@@ -2,7 +2,7 @@ import Table from "react-bootstrap/Table";
 
 const ItemProducto = () => {
   return (
-    <div className="table-responsive">
+    <div className="table-responsive shadow">
       <Table striped bordered hover>
         <thead>
           <tr class="text-center align-middle">
@@ -22,13 +22,13 @@ const ItemProducto = () => {
             <td>
               <img src="https://images.pexels.com/photos/28509915/pexels-photo-28509915.jpeg" class="img-fluid rounded table-img" alt="Pizza"></img>
             </td>
-            <td>Categoria</td>
+            <td>Pizza</td>
             <td>
               <div class="d-flex justify-content-center gap-2">
-                <button class="btn btn-warning btn-sm shadow">
+                <button type="button" class="btn btn-warning btn-sm shadow">
                   <i class="bi bi-pencil-square"></i>
                 </button>
-                <button class="btn btn-danger btn-sm shadow">
+                <button type="button" class="btn btn-danger btn-sm shadow">
                   <i class="bi bi-trash"></i>
                 </button>
               </div>

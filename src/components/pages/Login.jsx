@@ -18,6 +18,7 @@ const Login = () => {
       <Row xs={1} md={2}>
         <Col>
           <Card.Body>
+            <h4 className="text-center align-middle fs-2 display-1"><b>Iniciar sesion</b></h4>
             <Form onSubmit={handleSubmit(onSubmit)}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email:</Form.Label>
