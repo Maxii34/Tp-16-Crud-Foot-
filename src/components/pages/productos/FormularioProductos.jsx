@@ -1,9 +1,9 @@
 
 const FormularioProductos = () => {
     return (
-        <div>
-            <h3>Formulario</h3>
-        </div>
+        <section>
+            <h1>Crear Producto</h1>
+        </section>
     );
 };
 
