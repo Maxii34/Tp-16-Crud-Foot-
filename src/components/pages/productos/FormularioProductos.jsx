@@ -1,10 +1,17 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router";
 
 const FormularioProductos = () => {
   return (
-    <section>
-      <h1 className="border-bottom py-2">Crear Producto</h1>
+    <section className=" container my-2">
+      <div className="d-flex align-items-center justify-content-between mb-3 border-bottom py-2">
+        <h1 className=" mb-0">Crear Producto</h1>
+        <Link to="/admin" className="btn btn-primary shadow">
+          <i className="bi bi-arrow-left me-2"></i>
+          Volver
+        </Link>
+      </div>
       <Form>
         <Form.Group className="mb-3">
           <Form.Label>Nombre del producto</Form.Label>
@@ -58,7 +65,7 @@ const FormularioProductos = () => {
             name="descripcion"
             maxLength={500}
           />
-          <Form.Text muted>Máximo 500 caracteres.</Form.Text>
+          <Form.Text muted>Máximo 300 caracteres.</Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3">
@@ -66,13 +73,13 @@ const FormularioProductos = () => {
           <Form.Control
             as="textarea"
             rows={3}
-            placeholder="Describe el producto."
+            placeholder="Describe el producto (características, detalles, etc.)"
             name="descripcion"
           />
           <Form.Text muted>Máximo 500 caracteres.</Form.Text>
         </Form.Group>
 
-        <Button variant="success" type="submit">
+        <Button variant="success" type="submit" className=" shadow">
           Guardar Producto
         </Button>
       </Form>
