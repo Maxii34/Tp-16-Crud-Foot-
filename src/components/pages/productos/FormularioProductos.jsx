@@ -100,11 +100,13 @@ const FormularioProductos = () => {
             })}
           >
             <option value="">Selecciona una categoría...</option>
-            <option value="electronica">Electrónica</option>
-            <option value="ropa">Ropa</option>
-            <option value="hogar">Hogar y cocina</option>
-            <option value="libros">Libros</option>
-            <option value="juguetes">Juguetes</option>
+            <option value="Acompañamientos">Acompañamientos</option>
+            <option value="Ensaladas">Ensaladas</option>
+            <option value="Hamburguesas">Hamburguesas</option>
+            <option value="Postres">Postres</option>
+            <option value="Pizzas">Pizzas</option>
+            <option value="Sándwiches y Wraps">Sándwiches y Wraps</option>
+            <option value="Veggie/Veganas">Veggie/Veganas</option>
           </Form.Select>
         </Form.Group>
 
