@@ -20,7 +20,8 @@ sessionStorage.setItem('usuarioKey', JSON.stringify(usuarioLogueado))
   return (
     <>
       <BrowserRouter>
-        <Menu></Menu>
+      {/*Nombre de la prop UsuarioLogeado={UsuarioLogeado}<-- estado /igual pasa con lo que esta aki ---*/}
+        <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
         <main className="container my-3">
           <Routes>
             <Route path="/" element={<Inicio></Inicio>} />
