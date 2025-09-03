@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Dancing+Script:wght@400..700&family=Gochi+Hand&family=Sue+Ellen+Francisco&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Dancing+Script:wght@400..700&family=Gochi+Hand&family=Sue+Ellen+Francisco&display=swap");
 
-#root{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-main{
-    flex-grow: 1;
+main {
+  flex-grow: 1;
 }
 
 .titulo {
@@ -32,14 +32,14 @@ main{
 /*Card detalles*/
 /*Imagen en la izquierda y detalles a la derecha*/
 .Card-producto {
-  width: 100%;         
-  max-width: 22rem;    
+  width: 100%;
+  max-width: 22rem;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   transition: 300ms;
-  margin: 0 auto;      
-  background-color: #fffff;
+  margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .Card-producto:hover {
@@ -52,12 +52,26 @@ main{
   object-fit: cover;
   width: 100%;
   max-height: 300px;
-  border-top-left-radius: 8px;   
-  border-top-right-radius: 8px;  
-  border-bottom-left-radius: 0;  
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
+.detalleProducto {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  transition: 300ms;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 4px;
+}
+
+.detalleProducto:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+  background-color: #d6cece49;
+}
 
 
 /*Inicio Maquetado*/
@@ -69,7 +83,7 @@ main{
 }
 
 .bord-top {
-  border-top: 1px solid black ;
+  border-top: 1px solid black;
 }
 
 /*Imagen dentro de la tabla de productos disponibles*/
@@ -77,8 +91,13 @@ main{
   width: 150px;
   border: 2px solid #33303049;
   object-fit: contain;
-  transition: transform 0.9s ease; 
+  transition: transform 0.9s ease;
 }
 .table-img:hover {
-  transform: scale(1.09);        /* 🔹 zoom suave al pasar el mouse */
+  transform: scale(1.09); /* 🔹 zoom suave al pasar el mouse */
+}
+
+.contenedor-fijo {
+  min-height: 200px;
+  margin: 0 auto;
 }
