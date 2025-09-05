@@ -12,6 +12,12 @@ const FormularioProductos = () => {
     formState: { errors },
   } = useForm();
 
+  //data es el objeto de los datos para guardar del form
+  const onSubmit = (data) => {
+    console.log(data);
+    //agregar id
+  };
+
   return (
     <section className=" container my-2">
       <div className="d-flex align-items-center justify-content-between mb-3 border-bottom py-2">
@@ -21,7 +27,7 @@ const FormularioProductos = () => {
           Volver
         </Link>
       </div>
-      <Form>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3">
           <Form.Label>Nombre del producto</Form.Label>
           <Form.Control
@@ -108,6 +114,9 @@ const FormularioProductos = () => {
             <option value="Sándwiches y Wraps">Sándwiches y Wraps</option>
             <option value="Veggie/Veganas">Veggie/Veganas</option>
           </Form.Select>
+          <Form.Text className="text-danger">
+            {errors.categoria?.message}
+          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3">

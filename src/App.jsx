@@ -11,11 +11,15 @@ import { useEffect, useState } from "react";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 
 function App() {
+  //Lee si el usuario esta logeado, si no lo esta es un undefine y entonses pasa a false
   const sesionUsusuario =
     JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
+  // Estado que guarda si el usuario está logueado (true/false) y arranca con lo que haya en sessionStorage
   const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsusuario);
+  // Estado que guarda la lista de productos (arranca vacío)
   const [productos, setProductos] = useState([]);
 
+  //Guarda si el usuario esta logeado en sessionStorage con la clave usuarioKey
   useEffect(() => {
     sessionStorage.setItem("usuarioKey", JSON.stringify(usuarioLogueado));
   }, [usuarioLogueado]);

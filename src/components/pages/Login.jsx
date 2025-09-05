@@ -12,12 +12,10 @@ const Login = ({ setUsuarioLogueado }) => {
   const navegacion = useNavigate();
 
   const onSubmit = (data) => {
-    console.log(data);
     if (
       data.email === import.meta.env.VITE_APY_EMAIL &&
       data.password === import.meta.env.VITE_APY_PASSWORD
     ) {
-      console.log("aqui logueo al usuario");
       //aqui logueo al usuario
       //1- actualizar el estado
       setUsuarioLogueado(true);
