@@ -14,15 +14,21 @@ function App() {
   //Lee si el usuario esta logeado, si no lo esta es un undefine y entonses pasa a false
   const sesionUsusuario =
     JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
+
+  const productosLS = JSON.parse(localStorage.getItem("productosKey")) || [];
   // Estado que guarda si el usuario está logueado (true/false) y arranca con lo que haya en sessionStorage
   const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsusuario);
   // Estado que guarda la lista de productos (arranca vacío)
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState(productosLS);
 
   //Guarda si el usuario esta logeado en sessionStorage con la clave usuarioKey
   useEffect(() => {
     sessionStorage.setItem("usuarioKey", JSON.stringify(usuarioLogueado));
   }, [usuarioLogueado]);
+
+  useEffect(() => {
+    localStorage.setItem("productosKey", JSON.stringify(productos));
+  }, [productos]);
 
   return (
     <>
