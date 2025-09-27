@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
+import { Col, Row } from "react-bootstrap";
 
 const FormularioProductos = () => {
   const {
@@ -28,96 +29,105 @@ const FormularioProductos = () => {
         </Link>
       </div>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group className="mb-3">
-          <Form.Label>Nombre del producto</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Ingresa el nombre del producto"
-            {...register("nombreProducto", {
-              required: "El nombre del producto es un dato obligatorio",
-              minLength: {
-                value: 2,
-                message:
-                  "El nombre del producto debe tener almenos 2 caracteres",
-              },
-              maxLength: {
-                value: 100,
-                message:
-                  "El nombre del producto debe tener como maximo 100 caracteres",
-              },
-            })}
-          />
-          <Form.Text className="text-danger">
-            {errors.nombreProducto?.message}
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Label>Precio</Form.Label>
-          <Form.Control
-            type="number"
-            placeholder="Agrega el precio"
-            {...register("precio", {
-              required: "El precio es un campo obligatorio",
-              minLength: {
-                value: 1,
-                message: "El precio debe tener al menos 1 dígito",
-              },
-              maxLength: {
-                value: 6,
-                message: "El precio no puede superar los 6 dígitos",
-              },
-            })}
-          />
-          <Form.Text className="text-danger">
-            {errors.precio?.message}
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Label>URL de la imagen</Form.Label>
-          <Form.Control
-            type="url"
-            placeholder="https://ejemplo.com/imagen.jpg"
-            {...register("imagenUrl", {
-              required: "La URL de la imagen es obligatoria",
-              minLength: {
-                value: 10,
-                message: "La URL debe tener al menos 10 caracteres",
-              },
-              maxLength: {
-                value: 200,
-                message: "La URL no puede superar los 200 caracteres",
-              },
-            })}
-          />
-          <Form.Text className="text-danger">
-            {errors.imagenUrl?.message}
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Label>Categoría</Form.Label>
-          <Form.Select
-            name="categoria"
-            aria-label="Selecciona una categoría"
-            {...register("categoria", {
-              required: "Debe seleccionar una categoria",
-            })}
-          >
-            <option value="">Selecciona una categoría...</option>
-            <option value="Acompañamientos">Acompañamientos</option>
-            <option value="Ensaladas">Ensaladas</option>
-            <option value="Hamburguesas">Hamburguesas</option>
-            <option value="Postres">Postres</option>
-            <option value="Pizzas">Pizzas</option>
-            <option value="Sándwiches y Wraps">Sándwiches y Wraps</option>
-            <option value="Veggie/Veganas">Veggie/Veganas</option>
-          </Form.Select>
-          <Form.Text className="text-danger">
-            {errors.categoria?.message}
-          </Form.Text>
-        </Form.Group>
+        <Row>
+          <Col md={6}>
+            <Form.Group className="mb-3">
+              <Form.Label>Nombre del producto</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ingresa el nombre del producto"
+                {...register("nombreProducto", {
+                  required: "El nombre del producto es un dato obligatorio",
+                  minLength: {
+                    value: 2,
+                    message:
+                      "El nombre del producto debe tener almenos 2 caracteres",
+                  },
+                  maxLength: {
+                    value: 100,
+                    message:
+                      "El nombre del producto debe tener como maximo 100 caracteres",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.nombreProducto?.message}
+              </Form.Text>
+            </Form.Group>
+          </Col>
+          <Col md={6}>
+            <Form.Group className="mb-3">
+              <Form.Label>Precio</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Agrega el precio"
+                {...register("precio", {
+                  required: "El precio es un campo obligatorio",
+                  minLength: {
+                    value: 1,
+                    message: "El precio debe tener al menos 1 dígito",
+                  },
+                  maxLength: {
+                    value: 6,
+                    message: "El precio no puede superar los 6 dígitos",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.precio?.message}
+              </Form.Text>
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Form.Group className="mb-3">
+              <Form.Label>URL de la imagen</Form.Label>
+              <Form.Control
+                type="url"
+                placeholder="https://ejemplo.com/imagen.jpg"
+                {...register("imagenUrl", {
+                  required: "La URL de la imagen es obligatoria",
+                  minLength: {
+                    value: 10,
+                    message: "La URL debe tener al menos 10 caracteres",
+                  },
+                  maxLength: {
+                    value: 200,
+                    message: "La URL no puede superar los 200 caracteres",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.imagenUrl?.message}
+              </Form.Text>
+            </Form.Group>
+          </Col>
+          <Col md={6}>
+            <Form.Group className="mb-3">
+              <Form.Label>Categoría</Form.Label>
+              <Form.Select
+                name="categoria"
+                aria-label="Selecciona una categoría"
+                {...register("categoria", {
+                  required: "Debe seleccionar una categoria",
+                })}
+              >
+                <option value="">Selecciona una categoría...</option>
+                <option value="Acompañamientos">Acompañamientos</option>
+                <option value="Ensaladas">Ensaladas</option>
+                <option value="Hamburguesas">Hamburguesas</option>
+                <option value="Postres">Postres</option>
+                <option value="Pizzas">Pizzas</option>
+                <option value="Sándwiches y Wraps">Sándwiches y Wraps</option>
+                <option value="Veggie/Veganas">Veggie/Veganas</option>
+              </Form.Select>
+              <Form.Text className="text-danger">
+                {errors.categoria?.message}
+              </Form.Text>
+            </Form.Group>
+          </Col>
+        </Row>
 
         <Form.Group className="mb-3">
           <Form.Label>Descripción breve</Form.Label>
@@ -164,10 +174,11 @@ const FormularioProductos = () => {
             {errors.descripcionAmplia?.message}
           </Form.Text>
         </Form.Group>
-
-        <Button variant="success" type="submit" className="shadow">
-          Guardar Producto
-        </Button>
+        <div className=" d-flex justify-content-center">
+          <Button variant="success" type="submit" className="shadow">
+            Guardar Producto
+          </Button>
+        </div>
       </Form>
     </section>
   );
