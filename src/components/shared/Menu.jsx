@@ -25,16 +25,21 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
             {usuarioLogueado ? (
               <>
                 <NavLink to={"/admin"} className={"nav-link"}>
-                  Administrador
+                  <i class="bi bi-person-fill-slash"></i> Administrador
                 </NavLink>
                 <Button variant="link" className="nav-link" onClick={logaut}>
-                  Logout
+                  <i class="bi bi-box-arrow-left"></i> Cerrar Sesión
                 </Button>
               </>
             ) : (
-              <NavLink to={"/login"} className={"nav-link"}>
-                Login
-              </NavLink>
+              <>
+                <NavLink to={"/login"} className={"nav-link"}>
+                  <i class="bi bi-box-arrow-right"></i> Iniciar Sesión
+                </NavLink>
+                <NavLink to={"/registro"} className={"nav-link"}>
+                  <i class="bi bi-person-plus-fill"></i> Registro
+                </NavLink>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>
