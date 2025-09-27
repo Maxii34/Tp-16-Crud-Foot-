@@ -1,5 +1,6 @@
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router";
+import Swal from "sweetalert2";
 
 const ItemProducto = ({ itemProducto }) => {
   const eliminarProducto = () => {
@@ -39,10 +40,13 @@ const ItemProducto = ({ itemProducto }) => {
       <td>{itemProducto.categoria}</td>
       <td>
         <div class="d-flex justify-content-center gap-2">
-          <Link className="me-lg-2 btn btn-warning" to={`/admin/editar`}>
+          <Link className="btn btn-warning btn-sm" to={`/admin/editar`}>
             <i className="bi bi-pencil-square"></i>
           </Link>
-          <Link to="" className="btn btn-danger btn-sm shadow">
+          <Link
+            onClick={eliminarProducto}
+            className="btn btn-danger btn-sm"
+          >
             <i className="bi bi-trash"></i>
           </Link>
         </div>

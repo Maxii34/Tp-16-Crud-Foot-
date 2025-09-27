@@ -88,14 +88,12 @@ main {
 
 /*Imagen dentro de la tabla de productos disponibles*/
 .table-img {
-  width: 150px;
+  width: 100px;
+  height: 100px;
   border: 2px solid #33303049;
-  object-fit: contain;
-  transition: transform 0.9s ease;
+  object-fit: cover;
 }
-.table-img:hover {
-  transform: scale(1.09); /* 🔹 zoom suave al pasar el mouse */
-}
+
 
 .contenedor-fijo {
   min-height: 200px;
